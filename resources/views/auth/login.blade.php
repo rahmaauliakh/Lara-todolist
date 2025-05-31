@@ -1,6 +1,47 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        /* Custom Purple Theme */
+        .text-purple {
+            color: #6f42c1 !important;
+        }
+
+        .btn-purple {
+            background-color: #6f42c1;
+            border-color: #6f42c1;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .btn-purple:hover {
+            background-color: #5a34a1;
+            border-color: #5a34a1;
+        }
+
+        .link-purple {
+            color: #6f42c1;
+            font-weight: 500;
+        }
+
+        .link-purple:hover {
+            text-decoration: underline;
+        }
+
+        .auth-card {
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .feature-icon i {
+            font-size: 1rem;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+
     <div class="min-vh-100 d-flex align-items-center justify-content-center py-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -16,13 +57,11 @@
                             @endif
 
                             <div class="text-center mb-4">
-                                <h2 class="todo fw-bold mb-4">To-Do-List</h2>
+                                <h2 class="fw-bold mb-4 text-purple">To do list Ama</h2>
                                 <p class="text-muted">Masuk ke akun Anda</p>
                             </div>
 
-
                             <form method="POST" action="{{ route('login') }}">
-
                                 @csrf
 
                                 <div class="mb-3">
@@ -58,7 +97,7 @@
                                     @enderror
                                 </div>
 
-                                <button type="submit" class="btn btn-purple w-100 mb-3 position-relative overflow-hidden">
+                                <button type="submit" class="btn btn-purple w-100 mb-3">
                                     <span class="d-flex align-items-center justify-content-center">
                                         Masuk
                                         <i class="ms-2">➜</i>
@@ -66,7 +105,6 @@
                                 </button>
 
                                 <div class="text-center">
-
                                     <a href="{{ route('register') }}" class="link-purple">
                                         Belum Punya Akun? Daftar Sekarang
                                     </a>
@@ -76,31 +114,32 @@
                                     <div class="row g-4">
                                         <div class="col-6">
                                             <div class="d-flex align-items-center">
-                                                <div class="feature-icon me-2"><i class="bi bi-check-circle"></i></div>
+                                                <div class="feature-icon me-2 text-purple"><i class="bi bi-check-circle"></i></div>
                                                 <span class="small text-muted">Task Management</span>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="d-flex align-items-center">
-                                                <div class="feature-icon me-2"><i class="bi bi-check-circle"></i></div>
+                                                <div class="feature-icon me-2 text-purple"><i class="bi bi-check-circle"></i></div>
                                                 <span class="small text-muted">Progress Tracking</span>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="d-flex align-items-center">
-                                                <div class="feature-icon me-2"><i class="bi bi-check-circle"></i></div>
+                                                <div class="feature-icon me-2 text-purple"><i class="bi bi-check-circle"></i></div>
                                                 <span class="small text-muted">Team Collaboration</span>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="d-flex align-items-center">
-                                                <div class="feature-icon me-2"><i class="bi bi-check-circle"></i></div>
+                                                <div class="feature-icon me-2 text-purple"><i class="bi bi-check-circle"></i></div>
                                                 <span class="small text-muted">Priority Settings</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
